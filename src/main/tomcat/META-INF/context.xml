@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+
+    <!--
+    <Resource name="mail/MailSession" auth="Container"
+              type="javax.mail.Session"
+              mail.debug="${mail.debug}"
+              mail.smtp.host="${mail.smtp.host}"
+              mail.smtp.port="${mail.smtp.port}"
+              mail.smtp.auth="${mail.smtp.auth}"
+              mail.smtp.user="${mail.smtp.user}"
+              mail.smtp.password="${mail.smtp.password}"
+              mail.smtp.starttls.enable="${mail.smtp.starttls.enable}"/>
+    -->
+
+</Context>

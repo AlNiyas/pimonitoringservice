@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+softwaretype: single-module
+deployfile: sda-dd.xml
+softwaresubtype: war
+archivetype: DC
+keyname: ${project.build.finalName}
+keyvendor: idbhq.org
+keylocation: Deployment Manager
+keycounter: 1
+componentelement: <componentelement  name="${project.build.finalName}"
+  vendor="idbhq.org" componenttype="DC" subsystem="NO_SUBSYS"
+  location="Deployment Manager" counter="1" deltaversion="F"
+  updateversion="LB-${timestamp}"
+  componentprovider="Deployment Manager" archivetype="DC"/>
+Ext-SDM-SDA-Comp-Version: 1
+JarSAP-Standalone-Version: 20090803.1000
+JarSAPProcessing-Version: 20090907.1000
+JarSL-Version: 20100616.1800
+compress: true
+

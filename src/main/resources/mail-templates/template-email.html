@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<div th:if="${#lists.isEmpty(messageModels)}">
+		<h2 style="color: #568203">Messages : OK</h2>
+	</div>
+	<div th:if="${not #lists.isEmpty(messageModels)}">
+		<h2 style="color: #800000">Messages : Error | Scheduled status
+			for > 60 minutes</h2>
+		<table border="1">
+			<thead>
+				<tr>
+					<th th:text="Error" />
+					<th th:text="Scheduled" />
+					<th th:text="Successfull" />
+					<th th:text="Terminated" />
+					<th th:text="Sender" />
+					<th th:text="Receiver" />
+					<th th:text="Interface" />
+					<th th:text="Scenario" />
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="messageModel, iStat : ${messageModels}">
+					<td th:text="${messageModel.systemError}" />
+					<td th:text="${messageModel.scheduled}" />
+					<td th:text="${messageModel.successful}" />
+					<td th:text="${messageModel.terminatedWithErrors}" />
+					<td th:text="${messageModel.senderComponent}" />
+					<td th:text="${messageModel.receiverComponent}" />
+					<td th:text="${messageModel.interfaceName}" />
+					<td th:text="${messageModel.scenarioIdentifier}" />
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br>
+	<div th:if="${channels!=null}">
+		<div th:if="${#lists.isEmpty(channels)}">
+			<h2 style="color: #568203">Channels : OK</h2>
+		</div>
+		<div th:if="${not #lists.isEmpty(channels)}">
+			<h2 style="color: #800000">Channels : Error for > 60 minutes</h2>
+			<table border="1">
+				<thead>
+					<tr>
+						<th th:text="Channel" />
+						<th th:text="Component" />
+						<th th:text="Adapter" />
+						<th th:text="Direction" />
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="channel, iStat : ${channels}">
+						<td th:text="${channel.channelName}" />
+						<td th:text="${channel.service}" />
+						<td th:text="${channel.adapterType}" />
+						<td th:text="${channel.direction}" />
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

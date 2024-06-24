@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<application-j2ee-engine xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                         xsi:noNamespaceSchemaLocation="application-j2ee-engine.xsd">
+    <reference reference-type="hard" prepend="true">
+        <reference-target provider-name="idbhq.org"
+                          target-type="application">oms-service-libs</reference-target>
+    </reference>
+    <!--  
+    <reference reference-type="hard">
+        <reference-target provider-name="sap.com"
+                          target-type="library">webservices_lib</reference-target>
+    </reference>
+    <reference reference-type="hard">
+        <reference-target provider-name="sap.com"
+                          target-type="application">tc/bpem/facade/ear</reference-target>
+    </reference>
+    <reference reference-type="hard">
+        <reference-target provider-name="sap.com"
+                          target-type="service">applocking</reference-target>
+    </reference>
+    <reference reference-type="hard" prepend="true">
+        <reference-target provider-name="idbhq.org"
+                          target-type="application">oms-service-libs</reference-target>
+    </reference>
+    <reference reference-type="hard">
+        <reference-target provider-name="idbhq.org"
+                          target-type="application">oms-netweaver-common-libs</reference-target>
+    </reference>
+    <reference reference-type="hard">
+        <reference-target provider-name="idbhq.org"
+                          target-type="application">oms-netweaver-hibernate-libs</reference-target>
+    </reference>
+    <reference reference-type="hard">
+        <reference-target provider-name="idbhq.org"
+                          target-type="application">oms-netweaver-spring-libs</reference-target>
+    </reference>
+    <reference reference-type="hard">
+        <reference-target provider-name="idbhq.org"
+                          target-type="application">oms-netweaver-jersey-libs</reference-target>
+    </reference>
+	-->
+    <provider-name>idbhq.org</provider-name>
+    <fail-over-enable mode="disable" xsi:type="fail-over-enableType_disable" />
+    <start-up mode="always" />
+</application-j2ee-engine>
